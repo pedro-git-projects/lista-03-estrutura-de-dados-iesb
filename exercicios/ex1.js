@@ -5,13 +5,17 @@ let reader = prompt();
 export const ex1 = () => {
 	const repeticoes = 20;
 	let numeros = [];
-	
+
 	while(numeros.length < repeticoes) {
 		let input = reader("-> Insira um número: ")
-		numeros.push(input);
-		console.log(`Número ${numeros.length} de ${repeticoes} inserido!`);
-	}
+		if(isNaN(parseInt(input))) {
+			console.log(`Por favor insira um valor numérico`);
+		} else {
+			numeros.push(input);
+			console.log(`Número ${numeros.length} de ${repeticoes} inserido!`);
 
+		}
+	}
 
 	const numerosToNumber = numeros.map((el) => parseInt(el) );
 	const soma = numerosToNumber.reduce((a,b) => a+b, 0);
