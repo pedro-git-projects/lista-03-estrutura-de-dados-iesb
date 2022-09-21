@@ -1,3 +1,7 @@
 import { escolha } from "./exercicios/utils/escolha.js"
 
-escolha();
+try {
+	escolha();
+} catch(err) {
+	console.log(err);
+}

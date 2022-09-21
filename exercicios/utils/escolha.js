@@ -29,6 +29,7 @@ export const escolha = () => {
 		case "5":
 			console.log(`Exercício 5 escolhido: `)
 			ex5();
-			break;
+		default:
+			throw "Insira um número de 1 a 5!";
 	}	
 }
